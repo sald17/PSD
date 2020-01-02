@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/2fe4153774.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content">
+        <!-- Side menu -->
+        <!-- main side menu -->
+        <nav class="navbar navbar-light bg-light text-light" id="side-menu">
+            <div class="py-3 h-100 w-100 d-flex flex-column justify-content-start align-items-start">
+                <a class="w-100 p-2 d-flex align-items-center logo no-underline">
+                    <i class="fa fa-spotify pr-2" style="font-size:40px;"></i>
+                    <h3 class="mb-1">Spotify</h3>
+
+                </a>
+                <div class="w-100 pt-3 d-flex flex-column lg-menu text-light">
+                    <a class="px-2 my-2 d-flex w-100 justify-content-start align-items-center no-underline">
+                        <i class="fa fa-home"
+                            style="font-size: 25px; padding-right: 10px; color: white; text-decoration: none !important;"></i>
+                        <h6 class="mb-1" style="color: white;">Home</h6>
+                    </a>
+                    <a class="px-2 my-2 d-flex w-100 justify-content-start align-items-center no-underline">
+                        <i class="fa fa-search" style="font-size: 25px; padding-right: 10px; color: white;"></i>
+                        <h6 class="mb-1" style="color: white;">Search</h6>
+                    </a>
+                    <a class="px-2 my-2 d-flex w-100 justify-content-start align-items-center no-underline">
+                        <i class="fa fa-list-ul" style="font-size: 25px; padding-right: 10px; color: white;"></i>
+                        <h6 class="mb-1" style="color: white;">Your Library</h6>
+                    </a>
+                    <h6 class="px-2 py-2 my-1 text-light">
+                        Playlist
+                    </h6>
+                    <div class="d-flex flex-column overflow">
+                        <a class="px-2 my-1 d-flex w-100 justify-content-start align-items-center">
+                            <i class="fa fa-plus" style="font-size: 25px; padding-right: 10px; color: white;"></i>
+                            <h6 class="mb-1" style="color: white;">Create Playlist</h6>
+                        </a>
+                        <a class="px-2 my-1 d-flex w-100 justify-content-start align-items-center">
+                            <p class="my-2">Playlist 1</p>
+                        </a>
+                        <a class="px-2 my-1 d-flex w-100 justify-content-start align-items-center">
+                            <p class="my-2">Playlist 2</p>
+                        </a>
+                        <a class="px-2 my-1 d-flex w-100 justify-content-start align-items-center">
+                            <p class="my-2">Playlist 3</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <!-- responsive side menu -->
+        <nav class="navbar navbar-expand-lg" id="sm-side-menu">
+            <div class="p-2 bd-highlight d-flex align-items-center text-light logo" href="#">
+                <i class="fa fa-spotify pr-2" style="font-size:40px;"></i>
+                <h3 class="mb-1">Spotify</h3>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars text-light" style="font-size: 32px;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" style="text-align: right;">
+                    <li class="nav-item active text-light">
+                        <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Your Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">All playlist</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Content -->
+        <div class="pb-5 overflow text-light" id="root">
+
+            <!-- Header -->
+            <div id="navbar" class="d-flex flex-row justify-content-between align-items-center">
+                <div class="p-2 bd-highlight">
+                    <a class="rounded-circle" href="#" style="text-decoration: inherit; color: inherit;">
+                        <i class="fa fa-chevron-left rounded-circle"
+                            style="background-color: black; padding: 10px; text-align: center;"></i>
+                    </a>
+                    <a class="rounded-circle" href="#" style="text-decoration: inherit; color: inherit;">
+                        <i class="fa fa-chevron-right rounded-circle"
+                            style="background-color: black; padding: 10px; text-align: center;"></i>
+                    </a>
+                </div>
+                <div class="p-2 bd-highlight">
+                    <button type="button" class="btn btn-light">Upgrade</button>
+                    <button type="button" class="btn btn-dark">
+                        <i class="fa fa-user"></i>
+                        Phillip Nguyen
+                    </button>
+                </div>
+            </div>
+            <!-- Recently played header-->
+            <div class="row no-gutters bd-highlight" style="padding: 20px;">
+                <div class="d-flex flex-row bd-highlight justify-content-between mb-2 w-100">
+                    <div class="p-2 bd-highlight">
+                        <a href="#" class="a-tag text-light">
+                            <h4>Recently Played</h4>
+                        </a>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <a href="#" class="text-light">
+                            <p>See all</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Recently played playlist -->
+            <div id="recentPlaylist" class="ml-2 d-flex flex-row flex-wrap justify-content-start align-items-center">
+                <div class="my-2 mx-3">
+                    <a href="#" class="a-tag">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67616d0000b273288d32d88a616b9a278ddc07"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">The Wall</h6>
+                                <p class="card-text">Pink Floyd</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+                <div class="my-2 mx-3">
+                    <a href="#" class="a-tag">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67616d0000b2736b1a694e28aba62f1c8d09d6"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">More</h6>
+                                <p class="card-text">Pink Floyd</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="my-2 mx-3">
+                    <a href="#" class="a-tag">
+                        <div class="card">
+                            <img src="https://mosaic.scdn.co/640/ab67616d0000b27319d85a472f328a6ed9b704cfab67616d0000b273661d019f34569f79eae9e985ab67616d0000b2739602bb7b128f2469cf60f27dab67616d0000b273a5952c0e2e649f588603b743"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">EE</h6>
+                                <p class="card-text">Phillip Nguyen</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="my-2 mx-3">
+                    <a href="#" class="a-tag">
+                        <div class="card">
+                            <img src="https://mosaic.scdn.co/640/ab67616d0000b27334dd1b3a44cccef2d3c8bfceab67616d0000b2735bde909b2fea50c31be4deafab67616d0000b2736b3fa88bdd4af566fbbf2bbfab67616d0000b273cb44038b22f3d8a5e4e62d5a"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">Head</h6>
+                                <p class="card-text">Phillip Nguyen</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+                <div class="my-2 mx-3">
+                    <a href="#" class="a-tag">
+                        <div class="card">
+                            <img src="https://lineup-images.scdn.co/your-top-songs-2019_DEFAULT-en.jpg"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">Your Top Song 2019</h6>
+                                <p class="card-text">Various Artists</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+                <div class="my-2 mx-3">
+                    <a href="#" class="a-tag">
+                        <div class="card">
+                            <img src="https://dailymix-images.scdn.co/v1/img/6d264884e5537ad52fb5b3fb921db65bcfb73eef/3/en/default"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">Daily Mix 3</h6>
+                                <p class="card-text">Ngọt, Quái Vật Tí Hon, ...</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Heavy Rotation header-->
+            <div class="row no-gutters bd-highlight" style="padding: 20px;">
+                <div class="d-flex flex-row bd-highlight justify-content-between mb-2 w-100">
+                    <div class="p-2 bd-highlight">
+                        <a href="#" class="a-tag text-light">
+                            <h4>Your Heavy Rotation</h4>
+                        </a>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <a href="#" class="text-light">
+                            <p>See all</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Heavy Rotation playlist -->
+            <div id="rotationPlaylist" class="ml-2 d-flex flex-row flex-wrap justify-content-start align-items-center">
+                <div class="my-2 mx-3">
+                    <a href="#" class="">
+                        <div class="card">
+                            <img src="https://mosaic.scdn.co/640/ab67616d0000b27319d85a472f328a6ed9b704cfab67616d0000b273661d019f34569f79eae9e985ab67616d0000b2739602bb7b128f2469cf60f27dab67616d0000b273a5952c0e2e649f588603b743"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">EE</h6>
+                                <p class="card-text">Phillip Nguyen</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="my-2 mx-3">
+                    <a href="#" class="a-tag">
+                        <div class="card">
+                            <img src="https://mosaic.scdn.co/640/ab67616d0000b27334dd1b3a44cccef2d3c8bfceab67616d0000b2735bde909b2fea50c31be4deafab67616d0000b2736b3fa88bdd4af566fbbf2bbfab67616d0000b273cb44038b22f3d8a5e4e62d5a"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">Head</h6>
+                                <p class="card-text">Phillip Nguyen</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+                <div class="my-2 mx-3">
+                    <a href="#" class="a-tag">
+                        <div class="card">
+                            <img src="https://lineup-images.scdn.co/your-top-songs-2019_DEFAULT-en.jpg"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">Your Top Song 2019</h6>
+                                <p class="card-text">Various Artists</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+                <div class="my-2 mx-3">
+                    <a href="#" class="a-tag">
+                        <div class="card">
+                            <img src="https://dailymix-images.scdn.co/v1/img/6d264884e5537ad52fb5b3fb921db65bcfb73eef/3/en/default"
+                                class="card-img-top" alt="...">
+                            <a class="card-body text-light" href="#">
+                                <h6 class="card-title">Daily Mix 3</h6>
+                                <p class="card-text">Ngọt, Quái Vật Tí Hon, ...</p>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Breakout artist header -->
+
+            <div class="row no-gutters bd-highlight" style="padding: 20px;">
+                <div class="d-flex flex-row bd-highlight justify-content-between mb-2 w-100">
+                    <div class="p-2 bd-highlight">
+                        <a href="#" class="a-tag text-light">
+                            <h4>Breakout Artist</h4>
+                        </a>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <a href="#" class="text-light">
+                            <p>See all</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Breakout artist list -->
+            <div id="artistList" class="ml-2 d-flex flex-row flex-wrap justify-content-between align-items-center">
+                <div class="my-2 mx-3 rounded artist-container border border-dark">
+                    <a href="#" class="">
+                        <div class="artist-card d-flex flex-row justify-content-start align-items-start rounded">
+                            <img src="https://images.sk-static.com/images/media/profile_images/artists/219230/huge_avatar"
+                                class="artist-img" alt="...">
+                            <a class="mx-2 my-2 artist-info text-light">
+                                <h6 class="card-title">Muse</h6>
+                                <small class="card-text">Muse are an English rock band from Teignmouth, Devon, formed in
+                                    1994...</small>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                        <div class="explore">
+                            <a class="text-light" href="#">Explore</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="my-2 mx-3 rounded artist-container border border-dark">
+                    <a href="#" class="">
+                        <div class="artist-card d-flex flex-row justify-content-start align-items-start rounded">
+                            <img src="https://images.sk-static.com/images/media/profile_images/artists/400904/huge_avatar"
+                                class="artist-img" alt="...">
+                            <a class="mx-2 my-2 artist-info text-light">
+                                <h6 class="card-title">Pink Floyd</h6>
+                                <small class="card-text">Pink Floyd were an English rock band formed in London in
+                                    1965...</small>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                        <div class="explore">
+                            <a class="text-light" href="#">Explore</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="my-2 mx-3 rounded artist-container border border-dark">
+                    <a href="#" class="">
+                        <div class="artist-card d-flex flex-row justify-content-start align-items-start rounded">
+                            <img src="https://e-cdns-images.dzcdn.net/images/artist/9886f58e9ec2227a595afe3af923ec2f/500x500.jpg"
+                                class="artist-img" alt="...">
+                            <a class="mx-2 my-2 artist-info text-light">
+                                <h6 class="card-title">Artic Monkeys</h6>
+                                <small class="card-text">Arctic Monkeys are an English rock band formed in Sheffield in
+                                    2002...</small>
+                                <i class="fa fa-play-circle play-icon" style="font-size: 26px;"></i>
+                            </a>
+                        </div>
+                        <div class="explore">
+                            <a class="text-light" href="#">Explore</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Media Player -->
+        <div class="fixed-bottom lg-media-player" id="media-player">
+            <div class="px-4 text-light w-100 h-100 d-flex flex-row justify-content-between align-items-center">
+                <div id="lg-song" class="d-flex flex-row justify-content-center align-items-center">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273f05e5ac32fdd79d100315a20" class="media-song-img">
+                    <div class="ml-2 my-1 bd-highlight d-flex flex-column align-items-start">
+                        <h6 class="my-0"><a class="text-white" href="#">Time</a></h6>
+                        <p class="my-0"><a class="text-white" href="#">Pink Floyd</a></p>
+                    </div>
+                </div>
+
+                <div class="lg-media-controller w-50 d-flex flex-column justify-content-center align-items-center">
+                    <div class="d-flex flex-row justify-content-center align-items-center">
+
+                        <a>
+                            <img src="./baseline_shuffle_white_36dp.png" class="media-icon">
+                        </a>
+                        <a>
+                            <img src="./baseline_skip_previous_white_36dp.png" class="media-icon">
+
+                        </a>
+                        <a>
+                            <img src="./baseline_play_circle_outline_white_36dp.png" class="media-icon">
+
+                        </a>
+                        <a>
+                            <img src="./baseline_skip_next_white_36dp.png" class="media-icon">
+
+                        </a>
+                        <a>
+                            <img src="./baseline_replay_white_36dp.png" class="media-icon">
+                        </a>
+
+                    </div>
+                    <div class="w-100 d-flex flex-row justify-content-center align-items-center">
+                        <div>
+                            <span>00:00</span>
+                        </div>
+                        <div class="progress my-3 mx-4" style="height: 5px; width: 60%;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%;"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div>
+                            <span>00:00</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lg-media-util">
+                    <a class="text-light" href="/home/download" id="download">
+                        <img src="./baseline_cloud_download_white_36dp.png" class="media-icon">
+                    </a>
+                    <a><img src="./baseline_playlist_play_white_36dp.png" class="media-icon"></a>
+                    <a id="volume" style="overflow: auto;"><img src="./baseline_volume_up_white_36dp.png" class="media-icon"></a>
+                    <div id="volume-area" class="" >
+                        <div id="inner-volume">
+                            <div id="volume-progress" class="progress progress-bar-vertical" >
+                                <div id="volume-bar" class="progress-bar bg-success" role="progressbar" aria-valuenow="60"
+                                    aria-valuemin="0" aria-valuemax="100" style="height: 60%;">
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+
+                </div>
+
+                <div class="sm-media-controller">
+                    <div class="d-flex flex-row justify-content-center align-items-center">
+                        <a>
+                            <img src="./baseline_skip_previous_white_36dp.png" class="media-icon">
+
+                        </a>
+                        <a>
+                            <img src="./baseline_play_circle_outline_white_36dp.png" class="media-icon">
+
+                        </a>
+                        <a>
+                            <img src="./baseline_skip_next_white_36dp.png" class="media-icon">
+
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="./script.js">
+
+    </script>
+
+</body>
+
+</html>
